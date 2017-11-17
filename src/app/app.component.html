@@ -1,3 +1,16 @@
 <h1>
-  {{title}}
+  Github Search
 </h1>
+
+<div class="items-container">
+    <input
+      (keyup)="searchTerm$.next($event.target.value)" placeholder="Full Name">
+
+    <ul *ngIf="items">
+      <li *ngFor="let item of items | slice:0:9">
+        <a href="{{ item.html_url }}" target="_blank">
+          {{ item.login }} {{ item.followers }}
+        </a>
+      </li>
+    </ul>
+</div>
