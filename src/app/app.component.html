@@ -9,7 +9,7 @@
     <ul *ngIf="items">
       <li *ngFor="let item of items | slice:0:9">
         <a href="{{ item.html_url }}" target="_blank">
-          {{ item.login }} {{ item.followers }}
+          {{ item.login }}
         </a>
       </li>
     </ul>
